@@ -20,9 +20,8 @@ public class Folder {
 
     @ManyToOne
     @JoinColumn(name = "person_id", nullable = false)
-    @JsonIgnoreProperties({"folders"})
+    @JsonIgnoreProperties({"folders", "files"})
     private Person person;
-
 
     @OneToMany(mappedBy = "folder")
     private List<File> files;

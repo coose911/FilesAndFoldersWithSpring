@@ -18,11 +18,11 @@ public class File {
     private String extension;
     @ManyToOne
     @JoinColumn(name = "person_id", nullable = false)
-    @JsonIgnoreProperties({"files"})
+    @JsonIgnoreProperties({"files", "folders"})
     private Person person;
-    @JsonIgnoreProperties({"files"})
     @ManyToOne
     @JoinColumn(name = "folder_id")
+    @JsonIgnoreProperties({"files", "people"})
     private Folder folder;
 
 

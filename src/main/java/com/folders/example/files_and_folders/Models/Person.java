@@ -19,6 +19,7 @@ public class Person {
 
 
     @OneToMany(mappedBy = "person")
+    @JsonIgnoreProperties({"people"})
     private List<Folder> folders;
 
 
